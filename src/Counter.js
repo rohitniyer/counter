@@ -36,6 +36,7 @@ const Counter = ({ count, setCount, fetchPost }) => {
     inputValue = e.target.value;
     if (inputValue === "") {
       setCount("");
+      fetchPost("0");
       return;
     } else if (+inputValue > 1000) {
       setCount("1000");
