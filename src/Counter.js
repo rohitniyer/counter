@@ -8,7 +8,7 @@ const Counter = ({ count, setCount, fetchPost }) => {
       setCount("0");
       return;
     } else if (parseInt(count) + 1 > 1000) {
-      fetchPost(parseInt(count) + 1);
+      fetchPost("1000");
       setCount("1000");
       return;
     }
@@ -21,9 +21,11 @@ const Counter = ({ count, setCount, fetchPost }) => {
   const decrement = () => {
     if (isNaN(inputValue) || inputValue === "") {
       setCount("0");
+      fetchPost("0");
       return;
     } else if (count === "") {
       setCount("");
+      fetchPost("");
       return;
     }
     setCount(count - 1);
