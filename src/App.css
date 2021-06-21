@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.counter-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.holder {
+  /* border: 2px solid red; */
+  height: 40vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.heading {
+  /* border: 2px solid red; */
+  height: 50px;
+  padding-bottom: 20px;
+}
+.save-count {
+  display: flex;
+  justify-content: space-around;
+}
+.counter-input {
+  height: 8vh;
+  /* width: 18vw; */
+  border: 2px solid #b44809;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.counter-input > input {
+  border: none;
+  outline-width: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #f5b895;
+  border: 1px solid #b44809;
+  font-size: 19px;
+  font-weight: 600;
+  color: #b44809;
+  padding: 0 20px;
+  flex: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.minus,
+.plus {
+  /* height: 60px; */
+  height: 100%;
+  width: 60px;
+  border: none;
+  /* border-radius: 5px; */
+  /* border: 1px solid #b44809; */
+}
+
+.minus {
+  background-color: #ffffff;
+  color: #b44809;
+  font-size: 30px;
+}
+.plus {
+  background-color: #b44809;
   color: white;
+  font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.countervalue-container {
+  margin-top: 20px;
+  height: 10vh;
+  width: 100%;
+
+  /* display: flex;
+  flex-direction: column;
+
+  flex-wrap: nowrap; */
+  justify-content: center;
+  /* border: 2px solid red; */
 }
 
-@keyframes App-logo-spin {
-  from {
+.countervalue-container > h1 {
+  font-size: 20px;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
